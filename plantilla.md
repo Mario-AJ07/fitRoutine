@@ -1,8 +1,8 @@
 # Projecte Intermodular - [Nom del Projecte]
 
-**Autor/s:** 
-**Data:** 
-**Grup:** 
+**Autor/s:** Antonio y Mario
+**Data:** 14/10/2026
+**Grup:** Antonio y Mario
 
 ---
 
