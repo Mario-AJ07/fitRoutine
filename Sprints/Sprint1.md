@@ -48,6 +48,32 @@
 
 ---
 
+### Fecha: [16/10/2026]
+
+#### [Nombre del Alumno 1]
+- **¿Qué hice ayer?:** El otro dia hice el diagrama entidad relacion de la base de datos
+- **¿Qué voy a hacer hoy?:** Hoy empezare ya a hacer la base de datos
+- **¿Tengo algún bloqueo/impedimento?:** *(Ninguno / Error en la conexión con la BD, falta definir endpoint, etc.)*
+
+#### [Nombre del Alumno 2]
+- **¿Qué hice ayer?:** Hizo el menu de la aplicación en java
+- **¿Qué voy a hacer hoy?:** Empezar las demás clases para el primer prototipo de la aplicación
+- **¿Tengo algún bloqueo/impedimento?:** 
+
+---
+
+### Fecha: [21/10/2026]
+
+#### [Nombre del Alumno 1]
+- **¿Qué hice ayer?:** El otro dia hice la base de datos
+- **¿Qué voy a hacer hoy?:** Hoy empezare con los mockups
+- **¿Tengo algún bloqueo/impedimento?:** *(Ninguno / Error en la conexión con la BD, falta definir endpoint, etc.)*
+
+#### [Nombre del Alumno 2]
+- **¿Qué hice ayer?:**
+- **¿Qué voy a hacer hoy?:** 
+- **¿Tengo algún bloqueo/impedimento?:** 
+
 ## 🔎 Revisión del Sprint (Sprint Review)
 - **Fecha de la Demo:** [DD/MM/AAAA]
 
