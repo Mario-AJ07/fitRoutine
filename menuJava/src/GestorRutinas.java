@@ -20,7 +20,7 @@ public class GestorRutinas
 
     public void mostrarCatalogoEjercicios() 
     {
-        System.out.println("\n📋 CATÁLOGO DE EJERCICIOS DISPONIBLES:");
+        System.out.println("\nCATÁLOGO DE EJERCICIOS DISPONIBLES:");
         for (Ejercicio ej : catalogoEjercicios)
         {
             System.out.println(ej);
@@ -58,12 +58,12 @@ public class GestorRutinas
         return null;
     }
 
-    public void agregarEjercicioARutina(int idRutina, int idEjercicio, int series, int repeticiones) 
+    public void agregarEjercicioARutina(int idRutina, int idEjercicio, int series, int repeticiones, double peso) 
     {
         Ejercicio ej = buscarEjercicioPorId(idEjercicio);
         if (ej != null) 
         {
-            RutinaEjercicio rel = new RutinaEjercicio(contadorRelaciones++, idRutina, ej, series, repeticiones);
+            RutinaEjercicio rel = new RutinaEjercicio(contadorRelaciones++, idRutina, ej, series, repeticiones, peso);
             relaciones.add(rel);
             System.out.println("Ejercicio '" + ej.getNombre() + "' añadido a la rutina.");
         }
@@ -116,5 +116,36 @@ public class GestorRutinas
             System.out.println("Aún no se han añadido ejercicios a esta rutina.");
         }
         System.out.println("==================================\n");
+    }
+
+    public void modificarEjercicioEnRutina(int idRutina, int idRutinaEjercicio, int nuevasSeries, int nuevasReps, double nuevoPeso)
+    {
+        for (RutinaEjercicio re : relaciones)
+        {
+            if (re.getIdRutina() == idRutina && re.getIdRutinaEjercicio() == idRutinaEjercicio)
+            {
+                re.setSeries(nuevasSeries);
+                re.setRepeticiones(nuevasReps);
+                re.setPeso(nuevoPeso);
+                System.out.println("Ejercicio de la rutina modificado correctamente.");
+                return;
+            }
+        }
+        System.out.println("No se encontró el ejercicio dentro de la rutina indicada.");
+    }
+
+    public void eliminarRutina(int idRutina)
+    {
+        Rutina r = buscarRutinaPorId(idRutina);
+        if (r != null)
+        {
+            rutinas.remove(r);
+            relaciones.removeIf(re -> re.getIdRutina() == idRutina);
+            System.out.println("Rutina eliminada permanentemente.");
+        }
+        else
+        {
+            System.out.println("Rutina no encontrada.");
+        }
     }
 }

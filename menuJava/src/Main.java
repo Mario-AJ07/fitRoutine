@@ -14,7 +14,9 @@ public class Main
             System.out.println("1. Crear rutina");
             System.out.println("2. Añadir ejercicio del catálogo a una rutina");
             System.out.println("3. Consultar rutina");
-            System.out.println("4. Salir");
+            System.out.println("4. Modificar ejercicio de una rutina");
+            System.out.println("5. Eliminar rutina");
+            System.out.println("6. Salir");
             System.out.print("Selecciona una opción: ");
 
             int opcion = sc.nextInt();
@@ -45,9 +47,11 @@ public class Main
                         int series = sc.nextInt();
                         System.out.print("Número de repeticiones: ");
                         int reps = sc.nextInt();
+                        System.out.print("Peso (kg): ");
+                        double peso = sc.nextDouble();
                         sc.nextLine();
 
-                        gestor.agregarEjercicioARutina(idRutina, idEjercicio, series, reps);
+                        gestor.agregarEjercicioARutina(idRutina, idEjercicio, series, reps, peso);
                     } 
                     else 
                     {
@@ -64,6 +68,41 @@ public class Main
                     break;
 
                 case 4:
+                    gestor.listarRutinas();
+                    System.out.print("Introduce el ID de la rutina a modificar: ");
+                    int idRutinaMod = sc.nextInt();
+                    sc.nextLine();
+
+                    if (gestor.buscarRutinaPorId(idRutinaMod) != null)
+                    {
+                        gestor.consultarRutinaDetallada(idRutinaMod);
+                        System.out.print("Introduce el ID del ejercicio dentro de la rutina (entre corchetes): ");
+                        int idRE = sc.nextInt();
+                        System.out.print("Nuevas series: ");
+                        int nuevasSeries = sc.nextInt();
+                        System.out.print("Nuevas repeticiones: ");
+                        int nuevasReps = sc.nextInt();
+                        System.out.print("Nuevo peso (kg): ");
+                        double nuevoPeso = sc.nextDouble();
+                        sc.nextLine();
+
+                        gestor.modificarEjercicioEnRutina(idRutinaMod, idRE, nuevasSeries, nuevasReps, nuevoPeso);
+                    }
+                    else
+                    {
+                        System.out.println("La rutina indicada no existe.");
+                    }
+                    break;
+
+                case 5:
+                    gestor.listarRutinas();
+                    System.out.print("Introduce el ID de la rutina a eliminar: ");
+                    int idEliminar = sc.nextInt();
+                    sc.nextLine();
+                    gestor.eliminarRutina(idEliminar);
+                    break;
+
+                case 6:
                     salir = true;
                     System.out.println("¡Hasta luego!");
                     break;
