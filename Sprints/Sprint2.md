@@ -66,7 +66,7 @@
 ### Fecha: [6/10/2026]
 
 #### [Mario]
-- **¿Qué hice ayer?:** Mejoré la lógica y las tablas de la base de datos.
+- **¿Qué hice ayer?:** Empecé ha trasladar la base de datos a la maquina virtual para coectarla con el codigo.
 - **¿Qué voy a hacer hoy?:** Retoques y algún cambio de lógica.
 - **¿Tengo algún bloqueo/impedimento?:** No
 
