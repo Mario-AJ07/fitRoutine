@@ -146,6 +146,9 @@
 
 # 6. Diagrames
 - Diagrama de Dades (ER)
+
+ ![Base de datos er](./imagenes/entidadRelacion.drawio)
+
 - Diagrama de Classes (si aplica)
 - Diagrama de Seqüència d'almenys 1 procés
 
