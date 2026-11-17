@@ -110,6 +110,7 @@
 # 5. Solució
 - Quines pantalles s'han implementat (captures de pantalla)
 - Taules de la base de dades implementades
+  
 **Rutina**
 | Campo | Tipo | Descripción |
 |-------|------|-------------|
